@@ -15,8 +15,24 @@ func boolean() bool {
 	return b
 }
 
+func input() {
+	var peso float32
+	var nombre, apellido string
+	fmt.Println("Ingresa tu nombre")
+	fmt.Scanf("%s", &nombre)
+	fmt.Println("Ingresa tu apellido")
+	fmt.Scanf("%s", &apellido)
+
+	fmt.Println("Bienvenido", nombre, apellido)
+
+	fmt.Println("Ingresa tu peso")
+	fmt.Scanf("%f", &peso)
+	fmt.Println("El peso es:", peso, "kg")
+}
+
 func main() {
-	fmt.Println(hello("Austin"))
-	fmt.Println(plus(7, 5))
-	fmt.Println(boolean())
+	// fmt.Println(hello("Austin"))
+	// fmt.Println(plus(7, 5))
+	// fmt.Println(boolean())
+	input()
 }
