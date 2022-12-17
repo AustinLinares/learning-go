@@ -10,7 +10,13 @@ func plus(a int, b int) int {
 	return a + b
 }
 
+func boolean() bool {
+	var b bool
+	return b
+}
+
 func main() {
 	fmt.Println(hello("Austin"))
 	fmt.Println(plus(7, 5))
+	fmt.Println(boolean())
 }
