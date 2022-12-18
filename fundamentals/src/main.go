@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"strconv"
 )
 
 func hello(s string) string {
@@ -54,11 +55,24 @@ func firstArray(i uint8) {
 	fmt.Printf("El primer color es %v y es una variable de tipo %T \n", colores[0], colores[0])
 }
 
+func convertData() {
+	// string to bool
+	var mayorDeEdad string = "true"
+	boolVal, _ := strconv.ParseBool(mayorDeEdad)
+	fmt.Println(boolVal, reflect.TypeOf(boolVal))
+
+	// bool to string
+	menorDeEdad := false
+	strVal := strconv.FormatBool(menorDeEdad)
+	fmt.Println(strVal, reflect.TypeOf(strVal))
+}
+
 func main() {
 	// fmt.Println(hello("Austin"))
 	// fmt.Println(plus(7, 5))
 	// fmt.Println(boolean())
 	// input()
 	// conditional(false, true)
-	firstArray(0)
+	// firstArray(0)
+	convertData()
 }
