@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func hello(s string) string {
 	return "Hola " + s
@@ -39,10 +42,23 @@ func input() {
 	fmt.Println("El peso es:", peso, "kg")
 }
 
+func firstArray(i uint8) {
+	var colores [3]string
+	colores[0] = "Negro"
+	colores[1] = "Azul"
+	colores[2] = "Gris"
+
+	fmt.Println("El color elegido fue", colores[i], reflect.TypeOf(colores[i]))
+	fmt.Println("El último color es", colores[len(colores)-1])
+
+	fmt.Printf("El primer color es %v y es una variable de tipo %T \n", colores[0], colores[0])
+}
+
 func main() {
 	// fmt.Println(hello("Austin"))
 	// fmt.Println(plus(7, 5))
 	// fmt.Println(boolean())
 	// input()
-	conditional(false, true)
+	// conditional(false, true)
+	firstArray(0)
 }
