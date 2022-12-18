@@ -58,6 +58,7 @@ func firstArray(i uint8) {
 func convertData() {
 	// string to bool
 	var mayorDeEdad string = "true"
+	// ignoring error
 	boolVal, _ := strconv.ParseBool(mayorDeEdad)
 	fmt.Println(boolVal, reflect.TypeOf(boolVal))
 
@@ -67,6 +68,42 @@ func convertData() {
 	fmt.Println(strVal, reflect.TypeOf(strVal))
 }
 
+func declaring(favorite bool) {
+	// all variables are declared correctly
+	var favoritePokemon string = "Gengar"
+	firstPokemon := "Charmander"
+	name, firstPokemonGame := "Austin", "oro"
+	// var name, firstPokemonGame string = "Austin", "oro"
+
+	var (
+		edad   uint8 = 22
+		hungry bool  = true
+	)
+
+	fmt.Printf("Mi nombre es %v, tengo %v y mi primer juego pokemon fue %v \n", name, edad, firstPokemonGame)
+
+	if hungry {
+		fmt.Println("Tengo hambre")
+	}
+
+	if favorite {
+		fmt.Println("Mi pokemon favorito es", favoritePokemon)
+	} else {
+		fmt.Println("Mi primer pokemon fue", firstPokemon)
+	}
+}
+
+func defaultValues() {
+	var nombre string
+	var edad int
+	var peso float64
+	var estudiante bool
+	fmt.Println("Nombre: ", nombre)         // string vacio
+	fmt.Println("Edad: ", edad)             // 0
+	fmt.Println("Peso: ", peso)             // 0
+	fmt.Println("Estudiante: ", estudiante) //false
+}
+
 func main() {
 	// fmt.Println(hello("Austin"))
 	// fmt.Println(plus(7, 5))
@@ -74,5 +111,7 @@ func main() {
 	// input()
 	// conditional(false, true)
 	// firstArray(0)
-	convertData()
+	// convertData()
+	// declaring(true)
+	defaultValues()
 }
