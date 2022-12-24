@@ -132,6 +132,14 @@ func pointers() {
 	fmt.Println("El vehiculo3 es", *vehiculo3, vehiculo3) // El vehiculo3 es gris 0xc000010230
 }
 
+func constant() {
+	const Pi float32 = 3.1416
+
+	// Pi = 3.14159   // cannot assign to Pi (constant 3.1416 of type float32)
+
+	fmt.Println(Pi)
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -145,5 +153,6 @@ func main() {
 	// declaring(true)
 	// defaultValues()
 	// scopeTest(mainVar)
-	pointers()
+	// pointers()
+	constant()
 }
