@@ -104,7 +104,20 @@ func defaultValues() {
 	fmt.Println("Estudiante: ", estudiante) //false
 }
 
+func scopeTest(param1 string) {
+	{
+		var var2 = "innerBlock"
+		fmt.Println(var2)
+	}
+	fmt.Println(var1)
+	fmt.Println(param1)
+}
+
+var var1 = "globalScope"
+
 func main() {
+	var mainVar = "blockVariable"
+
 	// fmt.Println(hello("Austin"))
 	// fmt.Println(plus(7, 5))
 	// fmt.Println(boolean())
@@ -113,5 +126,6 @@ func main() {
 	// firstArray(0)
 	// convertData()
 	// declaring(true)
-	defaultValues()
+	// defaultValues()
+	scopeTest(mainVar)
 }
