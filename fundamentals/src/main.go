@@ -115,8 +115,25 @@ func scopeTest(param1 string) {
 
 var var1 = "globalScope"
 
+func pointers() {
+	vehiculo1 := "rojo"
+	fmt.Println("El vehiculo1 es", vehiculo1) // El vehiculo1 es rojo
+
+	vehiculo2 := vehiculo1
+	fmt.Println("El vehiculo2 es", vehiculo2) // El vehiculo2 es rojo
+
+	vehiculo3 := &vehiculo1
+	fmt.Println("El vehiculo3 es", *vehiculo3) // El vehiculo3 es rojo
+
+	vehiculo1 = "gris"
+
+	fmt.Println("El vehiculo1 es", vehiculo1, &vehiculo1) // El vehiculo1 es gris 0xc000010230
+	fmt.Println("El vehiculo2 es", vehiculo2, &vehiculo2) // El vehiculo2 es rojo 0xc000010250
+	fmt.Println("El vehiculo3 es", *vehiculo3, vehiculo3) // El vehiculo3 es gris 0xc000010230
+}
+
 func main() {
-	var mainVar = "blockVariable"
+	// var mainVar = "blockVariable"
 
 	// fmt.Println(hello("Austin"))
 	// fmt.Println(plus(7, 5))
@@ -127,5 +144,6 @@ func main() {
 	// convertData()
 	// declaring(true)
 	// defaultValues()
-	scopeTest(mainVar)
+	// scopeTest(mainVar)
+	pointers()
 }
