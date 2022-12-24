@@ -140,6 +140,20 @@ func constant() {
 	fmt.Println(Pi)
 }
 
+const Pi = 3.1416
+
+func circle(radio float64) (area float64, perimeter float64) {
+	area = Pi * radio * radio
+	perimeter = 2 * Pi * radio
+	return area, perimeter
+}
+
+func multiReturn() {
+	circleArea, circlePerimeter := circle(8)
+	fmt.Println("El area del circulo es: ", circleArea)
+	fmt.Println("El perimetro del circulo es: ", circlePerimeter)
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -154,5 +168,6 @@ func main() {
 	// defaultValues()
 	// scopeTest(mainVar)
 	// pointers()
-	constant()
+	// constant()
+	multiReturn()
 }
