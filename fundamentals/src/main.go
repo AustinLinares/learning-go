@@ -199,6 +199,15 @@ func comparisonOperatores() {
 	// fmt.Println("2 >= 2", 2 >= "2") // ERROR:both values should have same data type
 }
 
+func aritmeticOperators() {
+	fmt.Println("5 + 3", 5+3)   // 8
+	fmt.Println("5 - 3", 5-3)   // 2
+	fmt.Println("5 * 3", 5*3)   // 15
+	fmt.Println("5 / 3", 5/3)   // 1.666
+	fmt.Println("5 % 3", 5%3)   // 2
+	fmt.Println("10 % 3", 10%3) // 1 // residuo de x entre y
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -220,5 +229,6 @@ func main() {
 	// area, perimetro := lambdas(10)
 	// fmt.Println("El area del circulo es", area())
 	// fmt.Println("El perimetro del circulo es", perimetro())
-	comparisonOperatores()
+	// comparisonOperatores()
+	aritmeticOperators()
 }
