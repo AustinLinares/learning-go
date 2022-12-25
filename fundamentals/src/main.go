@@ -171,6 +171,19 @@ func ecoDeLaMontana(mensaje string, iteraciones uint) {
 	fmt.Println(mensaje, iteraciones)
 }
 
+func lambdas(radio float64) (area func() float64, perimetro func() float64) {
+
+	area = func() float64 {
+		return 3.1416 * radio * radio
+	}
+
+	perimetro = func() float64 {
+		return 2 * 3.1416 * radio
+	}
+
+	return
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -188,5 +201,8 @@ func main() {
 	// constant()
 	// multiReturn()
 	// fmt.Println(variadicPlus(5, 4, 3))
-	ecoDeLaMontana("Merry Christmas", 3)
+	// ecoDeLaMontana("Merry Christmas", 3)
+	area, perimetro := lambdas(10)
+	fmt.Println("El area del circulo es", area())
+	fmt.Println("El perimetro del circulo es", perimetro())
 }
