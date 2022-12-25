@@ -164,6 +164,13 @@ func variadicPlus(numeros ...int) (total int) {
 	return total
 }
 
+func ecoDeLaMontana(mensaje string, iteraciones uint) {
+	if iteraciones > 1 {
+		ecoDeLaMontana(mensaje, iteraciones-1)
+	}
+	fmt.Println(mensaje, iteraciones)
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -180,5 +187,6 @@ func main() {
 	// pointers()
 	// constant()
 	// multiReturn()
-	fmt.Println(variadicPlus(5, 4, 3)) // 12
+	// fmt.Println(variadicPlus(5, 4, 3))
+	ecoDeLaMontana("Merry Christmas", 3)
 }
