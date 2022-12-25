@@ -154,6 +154,16 @@ func multiReturn() {
 	fmt.Println("El perimetro del circulo es: ", circlePerimeter)
 }
 
+func variadicPlus(numeros ...int) (total int) {
+	// recorrer todos los numeros
+	for _, numero := range numeros {
+		// en cada iteración sumar al total el valor del numero
+		total = numero + total
+	}
+	// retornar el valor total
+	return total
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -169,5 +179,6 @@ func main() {
 	// scopeTest(mainVar)
 	// pointers()
 	// constant()
-	multiReturn()
+	// multiReturn()
+	fmt.Println(variadicPlus(5, 4, 3)) // 12
 }
