@@ -184,6 +184,21 @@ func lambdas(radio float64) (area func() float64, perimetro func() float64) {
 	return
 }
 
+func comparisonOperatores() {
+	fmt.Println("2 == 2", 2 == 2)               // true
+	fmt.Println("2 != 2", 2 != 2)               // false
+	fmt.Println("2 < 2", 2 < 2)                 // false
+	fmt.Println("2 > 2", 2 > 2)                 //false
+	fmt.Println("2 <= 2", 2 <= 2)               // true
+	fmt.Println("2 >= 2", 2 >= 2)               // true
+	fmt.Println("2 >= 2.50", 2 >= 2.50)         // false
+	fmt.Println("2.501 >= 2.50", 2.501 >= 2.50) // true
+	fmt.Println("2.50 == 2.5", "2.50" == "2.5") // false
+	fmt.Println("2.50 > 2.5", "2.50" > "2.5")   // true
+	fmt.Println("2.50 < 2.5", "2.50" < "2.5")   // false
+	// fmt.Println("2 >= 2", 2 >= "2") // ERROR:both values should have same data type
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -202,7 +217,8 @@ func main() {
 	// multiReturn()
 	// fmt.Println(variadicPlus(5, 4, 3))
 	// ecoDeLaMontana("Merry Christmas", 3)
-	area, perimetro := lambdas(10)
-	fmt.Println("El area del circulo es", area())
-	fmt.Println("El perimetro del circulo es", perimetro())
+	// area, perimetro := lambdas(10)
+	// fmt.Println("El area del circulo es", area())
+	// fmt.Println("El perimetro del circulo es", perimetro())
+	comparisonOperatores()
 }
