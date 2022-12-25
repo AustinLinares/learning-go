@@ -208,6 +208,22 @@ func aritmeticOperators() {
 	fmt.Println("10 % 3", 10%3) // 1 // residuo de x entre y
 }
 
+func switchEx() {
+	var juguete string
+	fmt.Println("Elija que tipo de juguete agregar? persona, animal o cosa")
+	fmt.Scanln(&juguete)
+	switch juguete {
+	case "persona":
+		fmt.Println("El juguete es una figura de accion")
+	case "cosa":
+		fmt.Println("El juguete es una cosa")
+	case "animal":
+		fmt.Println("El juguete es una mascota")
+	default:
+		fmt.Println("Escoge una opción válida")
+	}
+}
+
 func main() {
 	// var mainVar = "blockVariable"
 
@@ -230,5 +246,6 @@ func main() {
 	// fmt.Println("El area del circulo es", area())
 	// fmt.Println("El perimetro del circulo es", perimetro())
 	// comparisonOperatores()
-	aritmeticOperators()
+	// aritmeticOperators()
+	switchEx()
 }
