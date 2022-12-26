@@ -230,6 +230,31 @@ func forEx(times int) {
 	}
 }
 
+func disconnect() {
+	fmt.Println("Se ha desconectado de la base de datos")
+}
+
+func read() {
+	fmt.Println("Se han leido los registros de la base de datos")
+}
+
+func update() {
+	fmt.Println("Se han actalizado registros de la base de datos")
+}
+
+func connect() {
+	fmt.Println("Se ha conectado a la base de datos")
+}
+
+func deferEx() {
+	connect()
+	defer disconnect()
+	read()
+	update()
+}
+
 func main() {
-	forEx(3)
+	fmt.Println("Antes de la función defer")
+	deferEx()
+	fmt.Println("Después de la función defer")
 }
