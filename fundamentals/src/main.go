@@ -224,28 +224,12 @@ func switchEx() {
 	}
 }
 
-func main() {
-	// var mainVar = "blockVariable"
+func forEx(times int) {
+	for i := 1; i <= times; i++ {
+		fmt.Println("time", i)
+	}
+}
 
-	// fmt.Println(hello("Austin"))
-	// fmt.Println(plus(7, 5))
-	// fmt.Println(boolean())
-	// input()
-	// conditional(false, true)
-	// firstArray(0)
-	// convertData()
-	// declaring(true)
-	// defaultValues()
-	// scopeTest(mainVar)
-	// pointers()
-	// constant()
-	// multiReturn()
-	// fmt.Println(variadicPlus(5, 4, 3))
-	// ecoDeLaMontana("Merry Christmas", 3)
-	// area, perimetro := lambdas(10)
-	// fmt.Println("El area del circulo es", area())
-	// fmt.Println("El perimetro del circulo es", perimetro())
-	// comparisonOperatores()
-	// aritmeticOperators()
-	switchEx()
+func main() {
+	forEx(3)
 }
