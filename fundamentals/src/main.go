@@ -253,8 +253,36 @@ func deferEx() {
 	update()
 }
 
+func arrayEx() {
+	marcasDeAutos := [6]string{
+		"Mazda",
+		"Toyota",
+		"Nissan",
+		"Mitsubishi",
+		"Dodge",
+		"Chevrolet",
+	}
+	// marcasDeAutos[0] = "Mazda"
+	// marcasDeAutos[1] = "Toyota"
+	// marcasDeAutos[2] = "Nissan"
+	// marcasDeAutos[3] = "Mitsubishi"
+
+	numeros := [...]uint8{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+
+	fmt.Println(marcasDeAutos) // [Mazda Toyota Nissan Mitsubishi]
+
+	for i := 0; i < len(marcasDeAutos); i++ {
+		fmt.Println(marcasDeAutos[i])
+	}
+
+	for idx, v := range numeros {
+		fmt.Println(idx, v)
+	}
+}
+
 func main() {
-	fmt.Println("Antes de la función defer")
-	deferEx()
-	fmt.Println("Después de la función defer")
+	// fmt.Println("Antes de la función defer")
+	// deferEx()
+	// fmt.Println("Después de la función defer")
+	arrayEx()
 }
