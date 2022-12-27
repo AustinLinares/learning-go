@@ -286,6 +286,13 @@ func firstSlice() {
 	fmt.Println(marcasDeCoches, reflect.TypeOf(marcasDeCoches)) // [Mazda Toyota Nissan Mitsubishi Suzuki Mazda]
 }
 
+func sliceCut() {
+	razasDePerros := []string{"labrador", "poodle", "doberman", "shitzu", "beagle"}
+	fmt.Println(razasDePerros)
+	razasDePerros = append(razasDePerros[:2], razasDePerros[3:]...)
+	fmt.Println(razasDePerros)
+}
+
 func main() {
-	firstSlice()
+	sliceCut()
 }
