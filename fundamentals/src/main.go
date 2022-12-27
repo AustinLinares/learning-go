@@ -262,10 +262,6 @@ func arrayEx() {
 		"Dodge",
 		"Chevrolet",
 	}
-	// marcasDeAutos[0] = "Mazda"
-	// marcasDeAutos[1] = "Toyota"
-	// marcasDeAutos[2] = "Nissan"
-	// marcasDeAutos[3] = "Mitsubishi"
 
 	numeros := [...]uint8{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
 
@@ -280,9 +276,16 @@ func arrayEx() {
 	}
 }
 
+func firstSlice() {
+	marcasDeCoches := []string{"Mazda", "Toyota"}
+	// var marcasDeCoches = make([]string, 2)
+	// marcasDeCoches[0] = "Mazda"
+	// marcasDeCoches[1] = "Toyota"
+	fmt.Println(marcasDeCoches) // [Mazda Toyota]
+	marcasDeCoches = append(marcasDeCoches, "Nissan", "Mitsubishi", "Suzuki", "Mazda")
+	fmt.Println(marcasDeCoches, reflect.TypeOf(marcasDeCoches)) // [Mazda Toyota Nissan Mitsubishi Suzuki Mazda]
+}
+
 func main() {
-	// fmt.Println("Antes de la función defer")
-	// deferEx()
-	// fmt.Println("Después de la función defer")
-	arrayEx()
+	firstSlice()
 }
